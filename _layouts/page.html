@@ -1,30 +1,16 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-
-<html>
-
-    {% include head.html %}
-
-<body>
-
-    {% include header.html %}
-
-    {% if page.featured-image %}
-    <span class="image featured">
-      <img src="{{ page.featured-image }}" alt="">
-    </span>
+<section id="main" class="container {{ page.box_width }}">
+  {% if page.title %}
+  <header>
+    <h2>{{ page.title }}</h2>
+    {% if page.subtitle %}
+      <p>{{ page.subtitle }}</p>
     {% endif %}
-    
-    {{ content }}
-    
-    {% include footer.html %}
+  </header>
+  {% endif %}
 
-
-</body>
-
-</html>
+  {{ content }}
+</section>

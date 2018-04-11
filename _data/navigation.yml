@@ -1,0 +1,15 @@
+main:
+  - title: Home
+    url: /
+  - title: Layouts
+    url: /
+    children:
+      - title: Generic
+        url: /generic
+      - title: Contact
+        url: /contact
+      - title: Elements
+        url: /elements
+  - title: Sign up
+    url: /
+    class: button

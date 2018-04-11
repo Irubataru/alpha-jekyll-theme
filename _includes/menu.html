@@ -1,23 +1,46 @@
+{% assign navigation = site.data.navigation.main %}
+
+{% if navigation %}
 <nav id="nav">
 	<ul>
-		<li><a href="{{ site.baseurl | prepend: site.url }}">Home</a></li>
-		<li>
-			<a href="#" class="icon fa-angle-down">Layouts</a>
-			<ul>
-				<li><a href="generic.html">Generic</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="elements.html">Elements</a></li>
-				<li>
-					<a href="#">Submenu</a>
-					<ul>
-						<li><a href="#">Option One</a></li>
-						<li><a href="#">Option Two</a></li>
-						<li><a href="#">Option Three</a></li>
-						<li><a href="#">Option Four</a></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li><a href="#" class="button">Sign Up</a></li>
+    {% for nav in navigation %}
+      <li>
+      {% assign cls_str = nav.class %}
+      {% if nav.children %}
+        {% assign cls_str = cls_str | append: " icon fa-angle-down" %}
+      {% endif %}
+      {% if nav.url %}
+        {% comment %} internal/external URL check {% endcomment %}
+        {% if nav.url contains "://" %}
+          {% assign nav_url = nav.url %}
+        {% else %}
+          {% assign nav_url = nav.url | relative_url %}
+        {% endif %}
+        <a href="{{ nav_url }}" class="{{ cls_str }}">{{ nav.title }}</a>
+      {% else %}
+        <div>{{ nav.title }}</div>
+      {% endif %}
+      {% if nav.children %}
+        <ul>
+        {% for child in nav.children %}
+          <li>
+          {% if child.url %}
+            {% comment %} internal/external URL check {% endcomment %}
+            {% if child.url contains "://" %}
+              {% assign child_url = child.url %}
+            {% else %}
+              {% assign child_url = child.url | relative_url %}
+            {% endif %}
+            <a href="{{ child_url }}">{{ child.title }}</a>
+          {% else %}
+            <div>{{ child.title }}</div>
+          {% endif %}
+          </a>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      </li>
+    {% endfor %}
 	</ul>
 </nav>
+{% endif %}

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
@@ -11,7 +11,7 @@ title: Home
 		<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
 		adipiscing nunc adipiscing. Condimentum turpis massa.</p>
 	</header>
-	<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+	<span class="image featured"><img src="{{ '/assets/images/pic01.jpg' | relative_url }}" alt="" /></span>
 </section>
 
 <section class="box special features">
@@ -45,7 +45,7 @@ title: Home
 	<div class="6u 12u(narrower)">
 
 		<section class="box special">
-			<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+			<span class="image featured"><img src="{{ '/assets/images/pic02.jpg' | relative_url }}" alt="" /></span>
 			<h3>Sed lorem adipiscing</h3>
 			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
 			<ul class="actions">
@@ -57,7 +57,7 @@ title: Home
 	<div class="6u 12u(narrower)">
 
 		<section class="box special">
-			<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+			<span class="image featured"><img src="{{ '/assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
 			<h3>Accumsan integer</h3>
 			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
 			<ul class="actions">
