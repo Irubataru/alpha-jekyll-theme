@@ -15,6 +15,7 @@ cta:
   action: "Sign Up"
 ---
 
+<section id="main" class="container">
 <section class="box special features">
 	<header class="major">
 		<h2>Introducing the ultimate mobile app
@@ -95,3 +96,4 @@ cta:
 
 	</div>
 </div>
+</section>
