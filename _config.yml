@@ -10,18 +10,20 @@ title: Alpha
 subtitle: "by HTML5 UP"
 email: youremailaddress@gmail.com
 description: The Jekyll version of the Alpha theme by HTML5 UP.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://andrewbanchich.gitlab.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
 # Logo settings
 logo-image-url:
 font-awesome-icon-logo:
 
 # Social settings
-github_username: andrewbanchich
-twitter_username: andrewbanchich
-facebook_URL:
-instagram_username:
+github: mygithub
+twitter: mytwittername
+facebook: myfacebook
+instagram:
+dribbble: 
+google_plus:
 
 # Build settings
 markdown: kramdown

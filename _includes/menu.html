@@ -6,9 +6,6 @@
     {% for nav in navigation %}
       <li>
       {% assign cls_str = nav.class %}
-      {% if nav.children %}
-        {% assign cls_str = cls_str | append: " icon fa-angle-down" %}
-      {% endif %}
       {% if nav.url %}
         {% comment %} internal/external URL check {% endcomment %}
         {% if nav.url contains "://" %}
@@ -16,7 +13,12 @@
         {% else %}
           {% assign nav_url = nav.url | relative_url %}
         {% endif %}
-        <a href="{{ nav_url }}" class="{{ cls_str }}">{{ nav.title }}</a>
+        <a href="{{ nav_url }}" class="{{ cls_str }}">
+          {% if nav.children %}
+            <i class="icon fas fa-angle-down"></i>
+          {% endif %}
+          {{ nav.title }}
+        </a>
       {% else %}
         <div>{{ nav.title }}</div>
       {% endif %}

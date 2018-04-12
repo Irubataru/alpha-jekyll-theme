@@ -2,8 +2,14 @@
 layout: default
 ---
 
+{% if page.banner_image %}
+  {% capture banner_image_path %}{{ page.banner_image | relative_url }}{% endcapture %}
+{% else %}
+  {% capture banner_image_path %}{{ '/assets/images/overlay.png' | relative_url }}{% endcapture %}
+{% endif %}
+
 <!-- Banner -->
-<section id="banner">
+<section id="banner" style="background-image: url('{{ banner_image_path }}');">
   <h2>{{ site.title }}</h2>
   <p>{{ site.description }}</p>
   <ul class="actions">
@@ -12,7 +18,8 @@ layout: default
   </ul>
 </section>
 
-<div class="box">
+<div class="box special features">
   {{ content }}
-  {% include cta.html %}
 </div>
+
+{% include cta.html %}

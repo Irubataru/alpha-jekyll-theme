@@ -1,8 +1,8 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import url('font-awesome.min.css');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
 
 /*
 	Alpha by HTML5 UP
@@ -362,6 +362,7 @@
 				background: _palette(accent1, bg);
 				border-color: _palette(accent1, bg);
 				color: _palette(accent2, fg-bold);
+        font-family: "Font Awesome 5 Solid";
 				content: '\f00c';
 			}
 		}
@@ -862,6 +863,10 @@
 		text-decoration: none;
 		white-space: nowrap;
 
+    svg {
+      margin-right: 0.5em;
+    }
+
 		&:hover {
 			background-color: lighten(_palette(accent1, bg), 5);
 		}
@@ -1005,6 +1010,10 @@
 					> ul {
 						display: none;
 					}
+
+          svg {
+            margin-right: .5em;
+          }
 
 					a {
 						display: inline-block;
@@ -1186,7 +1195,6 @@
 	#banner {
 		background-attachment:	scroll,							fixed;
 		background-color:		#666;
-		background-image:		url('assets/images/overlay.png'),		url('../../assets/images/banner.jpg');
 		background-position:	top left,						center center;
 		background-repeat:		repeat,							no-repeat;
 		background-size:		auto,							cover;
@@ -1279,7 +1287,10 @@
 		.icons {
 			a {
 				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+
+        color: inherit;
 				opacity: 0.35;
+        text-decoration: none;
 
 				&:hover {
 					opacity: 0.75;
