@@ -8,8 +8,15 @@ layout: default
   {% capture banner_image_path %}{{ '/assets/images/overlay.png' | relative_url }}{% endcapture %}
 {% endif %}
 
+{% comment %} Let users stop the overlay if they wish {% endcomment %}
+{% if page.no_overlay %}
+  {% assign overlay_str = "" %}
+{% else %}
+  {% capture overlay_str %}url('{{ "/assets/images/overlay.png" | relative_url }}'), {% endcapture %}
+{% endif %}
+
 <!-- Banner -->
-<section id="banner" style="background-image: url('{{ banner_image_path }}');">
+<section id="banner" style="background-image: {{ overlay_str }}url('{{ banner_image_path }}');">
   <h2>{{ site.title }}</h2>
   <p>{{ site.description }}</p>
   <ul class="actions">
