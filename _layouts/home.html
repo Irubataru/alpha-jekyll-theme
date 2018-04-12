@@ -15,15 +15,7 @@ layout: default
   {% capture overlay_str %}url('{{ "/assets/images/overlay.png" | relative_url }}'), {% endcapture %}
 {% endif %}
 
-<!-- Banner -->
-<section id="banner" style="background-image: {{ overlay_str }}url('{{ banner_image_path }}');">
-  <h2>{{ site.title }}</h2>
-  <p>{{ site.description }}</p>
-  <ul class="actions">
-    <li><a href="#" class="button special">Sign Up</a></li>
-    <li><a href="#" class="button">Learn More</a></li>
-  </ul>
-</section>
+{% include banner.html %}
 
 <div class="box special features">
   {{ content }}

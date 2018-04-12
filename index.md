@@ -2,6 +2,12 @@
 layout: home
 title: Home
 banner_image: "/assets/images/banner.jpg"
+buttons:
+  - title: "Sign Up"
+    url: "#"
+    class: "special"
+  - title: "Learn More"
+    url: "#"
 ---
 
 <section class="box special features">
