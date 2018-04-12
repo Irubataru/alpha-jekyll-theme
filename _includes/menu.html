@@ -8,25 +8,25 @@
       <li>
       {% assign cls_str = nav.class %}
 
-        {% comment %} internal/external URL check {% endcomment %}
-        {% if nav.url contains "://" %}
-          {% assign nav_url = nav.url %}
-        {% elsif nav.url %}
-          {% assign nav_url = nav.url | relative_url %}
-        {% else %}
-          {% assign nav_url = "#" %}
-        {% endif %}
+      {% comment %} internal/external URL check {% endcomment %}
+      {% if nav.url contains "://" %}
+        {% assign nav_url = nav.url %}
+      {% elsif nav.url %}
+        {% assign nav_url = nav.url | relative_url %}
+      {% else %}
+        {% assign nav_url = "#" %}
+      {% endif %}
 
-        {% comment %} Set the browse icon {% endcomment %}
-        {% if nav.children %}
-          {% assign child_icon = '<i class="icon fas fa-angle-down"></i>' %}
-        {% else %}
-          {% assign child_icon = '' %}
-        {% endif %}
+      {% comment %} Set the browse icon {% endcomment %}
+      {% if nav.children %}
+        {% assign child_icon = '<i class="icon fas fa-angle-down"></i>' %}
+      {% else %}
+        {% assign child_icon = '' %}
+      {% endif %}
 
-        <a href="{{ nav_url }}" class="{{ cls_str }}">
-          {{ child_icon }}{{ nav.title }}
-        </a>
+      <a href="{{ nav_url }}" class="{{ cls_str }}">
+        {{ child_icon }}{{ nav.title }}
+      </a>
 
       {% comment %} loop over navigation children {% endcomment %}
       {% if nav.children %}
