@@ -2,7 +2,6 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
 
 /*
 	Alpha by HTML5 UP
@@ -293,6 +292,7 @@
 		&:before {
 			color: _palette(border);
 			content: '\f078';
+      font-weight: 900;
 			display: block;
 			height: _size(element-height);
 			line-height: _size(element-height);
@@ -362,8 +362,9 @@
 				background: _palette(accent1, bg);
 				border-color: _palette(accent1, bg);
 				color: _palette(accent2, fg-bold);
-        font-family: "Font Awesome 5 Solid";
-				content: '\f00c';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+				content: "\f00c";
 			}
 		}
 
@@ -1566,6 +1567,7 @@
 						border-radius: _size(border-radius);
 						color: #fff;
 						content: '\f0c9';
+            font-weight: 900;
 						display: block;
 						font-size: 16px;
 						height: 2.25em;
