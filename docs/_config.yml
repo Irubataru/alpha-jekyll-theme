@@ -5,13 +5,15 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
+remote_theme: irubataru/alpha-jekyll-theme
+
 # Site settings
 title: Alpha
 subtitle: "by HTML5 UP"
-email: youremailaddress@gmail.com
+email: email@address.com
 description: The Jekyll version of the Alpha theme by HTML5 UP.
 baseurl: "/alpha-jekyll-theme" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://irubataru.github.io" # the base hostname & protocol for your site
 
 # Logo settings
 logo-image-url:
