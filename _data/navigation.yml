@@ -1,8 +1,6 @@
 main:
   - title: Home
-    url: "#"
   - title: Layouts
-    url: "#"
     children:
       - title: Generic
         url: /generic
@@ -11,16 +9,10 @@ main:
       - title: Elements
         url: /elements
       - title: Submenu
-        url: "#"
         children:
           - title: "Option 1"
-            url: "#"
           - title: "Option 2"
-            url: "#"
           - title: "Option 3"
-            url: "#"
           - title: "Option 4"
-            url: "#"
   - title: Sign up
-    url: "#"
     class: button

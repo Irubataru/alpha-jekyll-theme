@@ -8,13 +8,13 @@
       <li>
       {% assign cls_str = nav.class %}
 
-      {% if nav.url %}
-
         {% comment %} internal/external URL check {% endcomment %}
         {% if nav.url contains "://" %}
           {% assign nav_url = nav.url %}
-        {% else %}
+        {% elsif nav.url %}
           {% assign nav_url = nav.url | relative_url %}
+        {% else %}
+          {% assign nav_url = "#" %}
         {% endif %}
 
         {% comment %} Set the browse icon {% endcomment %}
@@ -28,49 +28,38 @@
           {{ child_icon }}{{ nav.title }}
         </a>
 
-      {% else %}
-        <div>{{ child_icon }}{{ nav.title }}</div>
-      {% endif %}
-
       {% comment %} loop over navigation children {% endcomment %}
       {% if nav.children %}
         <ul>
 
         {% for child in nav.children %}
           <li>
-          {% if child.url %}
-
-            {% comment %} internal/external URL check {% endcomment %}
-            {% if child.url contains "://" %}
-              {% assign child_url = child.url %}
-            {% else %}
-              {% assign child_url = child.url | relative_url %}
-            {% endif %}
-
-            <a href="{{ child_url }}">{{ child.title }}</a>
-
+          {% comment %} internal/external URL check {% endcomment %}
+          {% if child.url contains "://" %}
+            {% assign child_url = child.url %}
+          {% elsif child.url %}
+            {% assign child_url = child.url | relative_url %}
           {% else %}
-            <div>{{ child.title }}</div>
+            {% assign child_url = "#" %}
           {% endif %}
+
+          <a href="{{ child_url }}">{{ child.title }}</a>
 
           {% comment %} loop over grandchildren {% endcomment %}
           {% if child.children %}
             <ul>
             {% for cc in child.children %}
-              {% if cc.url %}
 
-                {% comment %} internal/external URL check {% endcomment %}
-                {% if cc.url contains "://" %}
-                  {% assign child_url = cc.url %}
-                {% else %}
-                  {% assign child_url = cc.url | relative_url %}
-                {% endif %}
-
-                <a href="{{ child_url }}">{{ cc.title }}</a>
-
+              {% comment %} internal/external URL check {% endcomment %}
+              {% if cc.url contains "://" %}
+                {% assign child_url = cc.url %}
+              {% elsif cc.url %}
+                {% assign child_url = cc.url | relative_url %}
               {% else %}
-                <div>{{ cc.title }}</div>
+                {% assign child_url = "#" %}
               {% endif %}
+
+              <a href="{{ child_url }}">{{ cc.title }}</a>
             {% endfor %}
             </ul>
           {% endif %}
