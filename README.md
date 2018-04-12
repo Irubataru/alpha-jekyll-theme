@@ -69,7 +69,7 @@ This is the landing page for your project and is customized with a couple of
 jekyll header options:
 
  * `title` and `description` settings are read from the global configurations
-   (in `_config.yml`).
+    (in `_config.yml`).
  * `banner_image`: specifies the location of the header image to use
  * `buttons`: is a list of buttons to be placed below the title, they have the
     following options
@@ -78,6 +78,11 @@ jekyll header options:
     - `class`: any optional html classes you want to apply
  * `no_overlay`: toggle whether to overlay the banner image with a blurry filter
     or not
+ * `cta`: toggles the CTA banner at the bottom with the following options
+    - `title`: title text
+    - `description`: descriptive text
+    - `field`: placeholder for the text field (default: "Email Address")
+    - `action`: text on the button (default: "Sign Up")
 
 ### The page layout
 
