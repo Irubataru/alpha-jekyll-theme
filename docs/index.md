@@ -8,6 +8,11 @@ buttons:
     class: "special"
   - title: "Learn More"
     url: "#"
+cta:
+  title: "Sign up for beta access"
+  description: "Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc."
+  field: "Email Address"
+  action: "Sign Up"
 ---
 
 <section class="box special features">
