@@ -2,6 +2,11 @@
 
 A Jekyll version of the "Alpha" theme by [HTML5 UP](https://html5up.net/).
 
+A pseudo-fork of [this
+repository](https://github.com/andrewbanchich/alpha-jekyll-theme).
+
+### [Demo here](http://irubataru.com/alpha-jekyll-theme/)
+
 ## Installation
 
 If you are using it with GitHub pages you can simply use it as a [remote
