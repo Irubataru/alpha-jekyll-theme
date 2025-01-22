@@ -3,8 +3,8 @@
 Gem::Specification.new do |spec|
   spec.name          = "alpha_jekyll_theme"
   spec.version       = "0.1.1"
-  spec.authors       = ["Jonas Glesaaen"]
-  spec.email         = ["jonas@glesaaen.com"]
+  spec.authors       = ["Aleksandra Glesaaen Ødegård"]
+  spec.email         = ["aleksandra@glesaaen.com"]
 
   spec.summary       = %q{A Jekyll version of the "Alpha" theme by HTML5 UP.}
   spec.homepage      = "https://gitlab.com/irubataru/alpha-jekyll-theme"
